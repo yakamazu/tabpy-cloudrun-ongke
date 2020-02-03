@@ -63,5 +63,5 @@ EXTERNAL-IP specifies the IP address of the A record acquired in the procedure f
 ## Add DNS record at domain registrar
 https://cloud.google.com/run/docs/mapping-custom-domains?hl=en#dns_update
 
-#Access Tabpy
+# Access Tabpy
 Access Tabpy from Tableau's external service connection management
