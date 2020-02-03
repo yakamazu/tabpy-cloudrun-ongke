@@ -34,25 +34,26 @@ tabpy-user-management add -u <username> -p <password> -f pwd.txt
 Execute the following command in the directory where Dockerfile is stored.
 An image called tabpy-sample is created.
 
-`` `shell:
+```shell:
 docker image build -t asia.gcr.io/<project-id>/tabpy-sample:latest.
-`` `
+```
 
 ## PUSH of Docker image
 Push to Container Registry
 
-`` `shell:
+```shell:
 docker push asia.gcr.io/<project-id>/tabpy-sample:latest
-`` `
+```
 
 ## Deploy to Cloud Run
 
-`` `shell: CloudRunOnGKE
+```shell: CloudRunOnGKE
 gcloud beta run deploy tabpy-sample \
    --image asia.gcr.io/<project-id>/tabpy-sample \
    --platform gke \
-   --cluster cloudrun-test \
-   --cluster-location us-central1-a
+   --cluster <clouster-name> \
+   --cluster-location <location-name>
+```
 
 ## Mapping custom domains
 https://cloud.google.com/run/docs/mapping-custom-domains?hl=en
