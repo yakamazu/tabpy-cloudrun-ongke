@@ -8,9 +8,9 @@ WORKDIR $config_dir
 RUN pip install --upgrade pip && \
 	pip install numpy pandas scikit-learn scipy textblob nltk vaderSentiment && \
 	pip install reverse_geocoder geopy && \
-        pip install tabpy
+        pip install tabpy==1.0.0
 
-RUN tabpy-user-management add -u <username> -p <password> -f pwd.txt
+RUN tabpy-user add -u <username> -p <password> -f pwd.txt
 
 ENV PORT 8080 
 EXPOSE 8080
